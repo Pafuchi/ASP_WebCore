@@ -1,0 +1,25 @@
+﻿@page
+@model WebApplication1.Pages.Calculator.AdditionModel
+@{
+    ViewData["Title"] = "Addition";
+}
+
+<h2>Addition</h2>
+
+<div>
+ <p>Type a two numbers and Sum it with button.</p>
+</div>
+
+<form method="post">
+ 
+ <label>Number 1: </label>
+ <input type="number" name="VarA"/>
+ 
+ <label>Number 2: </label>
+ <input type="number" name="VarB"/>
+
+ @Html.DisplayFor(Model => Model.Result);
+
+ <input type="submit" value="Sum number 1 with number 2" />
+
+</form>

@@ -1,0 +1,29 @@
+﻿@page
+@model WebApplication2.Pages.AvarageModel
+@{
+ ViewData["Title"] = "Avarage calculator";
+}
+
+<h2>Vypocet prumeru</h2>
+@{
+ using (Html.BeginForm(FormMethod.Get))
+ {
+  @Html.Label("SMRDISSS, zadej pocet cisel: ");
+  @Html.TextBox("KolikCisel")
+
+  <input type="submit" value="Generuj" />
+
+  @Html.DisplayFor(m => m.AvarageNum);
+ }
+
+ using (Html.BeginForm())
+ {
+  for (byte i = 1; i <= Model.PocetCisel; i++)
+  {
+   @Html.Label("Cislo " + i);
+   @Html.TextBoxFor(m => m.Values[i]);
+  }
+  <input type="submit" value="Vypocitej" />
+
+ }
+}

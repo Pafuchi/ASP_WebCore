@@ -1,0 +1,25 @@
+﻿@page
+@model Galerie.Pages.Galleries.Bahna2010Model
+@using System.IO
+
+@{
+    ViewData["Title"] = "Bahna2010";
+}
+
+<h2>Výlet na akci Bahna 2010</h2>
+
+
+@{
+    foreach (FileInfo fotka in new DirectoryInfo("wwwroot\\images\\Bahna2010").GetFiles())
+    { 
+        <a href="" asp-route=""
+    
+    <img src="~/images/Bahna2010/@fotka.Name" width="100" />
+
+    }
+
+
+
+
+
+}
